@@ -5,7 +5,7 @@
  */
 
 import React, {useState} from 'react';
-import SafeAreaView from 'react-native';
+import {SafeAreaView} from 'react-native';
 import ToDoList from './ToDoList';
 import TodoForm from './ToDoForm';
 
@@ -21,11 +21,18 @@ const App = () => {
   };
 
   return (
-    <SafeAreaView style = {style.container}>
+    <SafeAreaView style = {styles.container}>
       <ToDoList tasks = {tasks} />
       <TodoForm addTask = {addTask}/>
     </SafeAreaView>
   );
+};
+
+const styles = {
+  container: {
+    flex: 1,
+    padding: 20,
+  },
 };
 
 export default App;
